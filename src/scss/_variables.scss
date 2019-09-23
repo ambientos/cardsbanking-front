@@ -1,0 +1,27 @@
+//
+// Image Directory
+//
+
+$img-dir: '../i/';
+
+
+//
+// Fonts Variables
+//
+
+$font-dir:	 '../fonts/';
+
+$font-main:  'GothamPro';
+
+$fonts:	(
+	( $font-main, 'light',      normal, 300, 20190904 ),
+	( $font-main, 'regular',    normal, 400, 20190904 ),
+	( $font-main, 'italic',     italic, 400, 20190904 ),
+	( $font-main, 'medium',     normal, 500, 20190904 ),
+	( $font-main, 'bold',       normal, 700, 20190904 ),
+);
+
+
+//
+// Icons
+//
