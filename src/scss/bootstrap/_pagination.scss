@@ -23,6 +23,10 @@
       }
       border: 1px solid transparent;
 
+      &.current {
+        color: darken($color, 45%);
+      }
+
       &.prev,
       &.next {
         $padding: 2em;

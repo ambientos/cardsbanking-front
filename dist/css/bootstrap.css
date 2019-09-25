@@ -2869,6 +2869,8 @@ input[type="button"].btn-block {
       font-size: .875rem;
       font-weight: 300;
       border: 1px solid transparent; }
+      .pagination .nav-links .page-numbers.current {
+        color: #020202; }
       .pagination .nav-links .page-numbers.prev, .pagination .nav-links .page-numbers.next {
         padding-left: 2em;
         padding-right: 2em;
