@@ -5,12 +5,11 @@ html(lang="ru" dir="ltr")
 		include _head.pug
 
 	body
+		include ../blocks/main/_mixins.pug
+
 		include ../blocks/header/header.pug
 
-		main.main
-			include ../blocks/main/_mixins.pug
-
-			block content
+		block content
 
 		include ../blocks/footer/footer.pug
 

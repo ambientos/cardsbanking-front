@@ -46,12 +46,22 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0; // 1
   font-family: $font-family-base;
-  @include font-size($font-size-base);
-  font-weight: $font-weight-base;
+  font: {
+    size: .9375rem;
+    weight: $font-weight-base;
+  }
   line-height: $line-height-base;
   color: $body-color;
   text-align: left; // 3
   background-color: $body-bg; // 2
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include media-breakpoint-down("sm") {
+    overflow-wrap: break-word;
+  }
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -85,6 +95,10 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 // Abbreviations
@@ -139,7 +153,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: $font-weight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
+  font-weight: $font-weight-medium; // Add the correct font weight in Chrome, Edge, and Safari
 }
 
 small {
@@ -171,6 +185,7 @@ a {
   color: $link-color;
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
+  @include transition;
 
   @include hover {
     color: $link-hover-color;

@@ -1,0 +1,49 @@
+mixin postsItem(post)
+	article.posts-item.box-item.post(
+		itemscope,
+		itemtype='http://schema.org/BlogPosting'
+	)
+		figure.posts-item-thumbnail
+			a(href='/')
+				img.img-fluid(
+					src='t/'+ post.thumb +'.jpg',
+					itemprop='image',
+					alt=''
+				)
+				figcaption.posts-item-category
+					span(itemprop='articleSection')= post.category
+
+		header.posts-item-title(itemprop='name')
+			a(
+				href='/',
+				rel='bookmark',
+				itemprop='url'
+			)
+				span(itemprop='headline')= post.title
+
+		.posts-item-excerpt(
+			itemprop='articleBody'
+		)!= post.excerpt
+
+		meta(
+			itemprop='author',
+			content='Ivan Ivanov'
+		)
+
+		meta(
+			itemscope,
+			itemprop='mainEntityOfPage',
+			itemtype='https://schema.org/WebPage',
+			itemid='/',
+			content=post.title
+		)
+
+		meta(
+			itemprop='dateModified',
+			content='2019-08-08'
+		)
+
+		meta(
+			itemprop='datePublished',
+			content='2019-08-08T13:27:57+03:00'
+		)

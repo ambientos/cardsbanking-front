@@ -1,73 +1,75 @@
 .pagination {
   display: flex;
+  justify-content: center;
+  background-color: $gray-100;
+
   @include list-unstyled();
   @include border-radius();
-}
 
-.page-link {
-  position: relative;
-  display: block;
-  padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: -$pagination-border-width;
-  line-height: $pagination-line-height;
-  color: $pagination-color;
-  background-color: $pagination-bg;
-  border: $pagination-border-width solid $pagination-border-color;
+  .nav-links {
+    $color: $gray-600;
 
-  &:hover {
-    z-index: 2;
-    color: $pagination-hover-color;
-    text-decoration: none;
-    background-color: $pagination-hover-bg;
-    border-color: $pagination-hover-border-color;
-  }
+    padding: .7em 0 .1em;
 
-  &:focus {
-    z-index: 2;
-    outline: $pagination-focus-outline;
-    box-shadow: $pagination-focus-box-shadow;
-  }
-}
+    .page-numbers {
+      $margin-pn: 1em;
 
-.page-item {
-  &:first-child {
-    .page-link {
-      margin-left: 0;
-      @include border-left-radius($border-radius);
+      display: inline-block;
+      margin-bottom: .7em;
+      padding: .95em 1em;
+      font: {
+        size: .875rem;
+        weight: $font-weight-light;
+      }
+      border: 1px solid transparent;
+
+      &.prev,
+      &.next {
+        $padding: 2em;
+
+        padding: {
+          left: $padding;
+          right: $padding;
+        }
+        border-color: lighten($color, 35%);
+
+        &:hover {
+          border-color: $color;
+        }
+      }
+
+      &.prev::before,
+      &.next::after {
+        font-size: 130%;
+        line-height: 1;
+      }
+
+      &.prev {
+        margin-right: $margin-pn;
+
+        &::before {
+          margin-right: $margin-pn * .5;
+          content: '\2190';
+        }
+      }
+
+      &.next {
+        margin-left: $margin-pn;
+
+        &::after {
+          margin-left: $margin-pn * .5;
+          content: '\2192';
+        }
+      }
+    }
+
+    &,
+    a {
+      color: $color;
+    }
+
+    a:hover {
+      color: darken($color, 30%);
     }
   }
-  &:last-child {
-    .page-link {
-      @include border-right-radius($border-radius);
-    }
-  }
-
-  &.active .page-link {
-    z-index: 1;
-    color: $pagination-active-color;
-    background-color: $pagination-active-bg;
-    border-color: $pagination-active-border-color;
-  }
-
-  &.disabled .page-link {
-    color: $pagination-disabled-color;
-    pointer-events: none;
-    // Opinionated: remove the "hand" cursor set previously for .page-link
-    cursor: auto;
-    background-color: $pagination-disabled-bg;
-    border-color: $pagination-disabled-border-color;
-  }
-}
-
-
-//
-// Sizing
-//
-
-.pagination-lg {
-  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
-}
-
-.pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
 }

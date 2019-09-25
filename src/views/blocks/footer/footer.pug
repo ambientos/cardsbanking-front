@@ -1,1 +1,34 @@
 footer.footer
+	.footer-main
+		.container
+			.row
+				.col-md-5
+					a.logo(href='/')
+						picture.logo-thumb._top
+							img(
+								src='i/logo-white.png',
+								srcset='i/logo-white.png, i/logo-white@2x.png 2x',
+								width='56',
+								alt=''
+							)
+						.logo-title
+							b CardsBanking.ru
+							span  Навигатор по банковским картам
+					.footer-info Содержание сайта не является рекомендацией или офертой и носит информационно-справочный характер
+
+				- var footerMenuTitles = ['Дебетовые карты', 'Кредитные карты', 'Кредитные карты'], footerMenuList = ['Кредитные карты', 'Сравнение кредиток', 'Ссылка 1', 'Ссылка 2', 'Ссылка 3'];
+				each footerMenuTitle in footerMenuTitles
+					.col-md
+						+footerMenu({'title': footerMenuTitle, 'list': footerMenuList})
+
+	.footer-sub
+		.container
+			.row
+				.col-md-3
+					.footer-copy © 2019 | CardsBanking.ru
+				.col-md
+					ul.footer-menu-sub.list-inline
+						- var footerMenuSubList = ['О сайте', 'Карта сайта', 'Политика конфиденциальности', 'Пользовательское соглашение'];
+						each footerMenuSubItem in footerMenuSubList
+							li.list-inline-item
+								a(href='/')= footerMenuSubItem

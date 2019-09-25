@@ -1,0 +1,7 @@
+mixin footerMenu(object)
+	.footer-menu-container
+		.footer-menu-title= object.title
+		ul.footer-menu.list-unstyled
+			each listItem in object.list
+				li
+					a(href='/')= listItem
