@@ -2,9 +2,10 @@
 // Basic Bootstrap table
 //
 
-.table {
+.table,
+.tablepress {
   width: 100%;
-  margin-bottom: $spacer;
+  margin-bottom: $paragraph-margin-bottom;
   color: $table-color;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
@@ -16,8 +17,10 @@
   }
 
   thead th {
+    font-weight: $font-weight-medium;
     vertical-align: bottom;
     border-bottom: (2 * $table-border-width) solid $table-border-color;
+    background-color: darken($gray-100, 2%);
   }
 
   tbody + tbody {
@@ -42,7 +45,8 @@
 //
 // Add or remove borders all around the table and between all the columns.
 
-.table-bordered {
+.table-bordered,
+.tablepress {
   border: $table-border-width solid $table-border-color;
 
   th,

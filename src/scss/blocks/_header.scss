@@ -7,13 +7,9 @@
 	&-search {
 		&-control {
 			height: auto;
-			padding: {
-				left: 1em;
-				top: .7em;
-				right: $grid-gutter-width * 1.5;
-				bottom: .7em;
-			}
+			padding-right: $grid-gutter-width * 1.5;
 			background: {
+				color: $white;
 				repeat: no-repeat;
 				position: calc(100% - #{$grid-gutter-width * .5}) 50%;
 				image: url('#{$img-dir}search.svg');

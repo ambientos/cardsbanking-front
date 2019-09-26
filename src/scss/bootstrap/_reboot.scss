@@ -46,10 +46,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0; // 1
   font-family: $font-family-base;
-  font: {
-    size: .9375rem;
-    weight: $font-weight-base;
-  }
+  @include font-size($font-size-base);
   line-height: $line-height-base;
   color: $body-color;
   text-align: left; // 3
@@ -119,7 +116,7 @@ abbr[data-original-title] { // 1
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: $paragraph-margin-bottom;
   font-style: normal;
   line-height: inherit;
 }
@@ -128,7 +125,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $paragraph-margin-bottom;
 }
 
 ol ol,
@@ -148,7 +145,7 @@ dd {
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 $paragraph-margin-bottom;
 }
 
 b,
@@ -230,7 +227,7 @@ pre {
   // Remove browser default top margin
   margin-top: 0;
   // Reset browser default of `1em` to use `rem`s
-  margin-bottom: 1rem;
+  margin-bottom: $paragraph-margin-bottom;
   // Don't allow content to break outside
   overflow: auto;
 }
@@ -242,7 +239,7 @@ pre {
 
 figure {
   // Apply a consistent margin strategy (matches our type styles).
-  margin: 0 0 1rem;
+  margin: 0 0 $paragraph-margin-bottom;
 }
 
 

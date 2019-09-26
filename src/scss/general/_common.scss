@@ -48,3 +48,33 @@
 		z-index: 1;
 	}
 }
+
+.currencyconverter-minimalistic {
+	&-container {
+		background: $yellow;
+		background: linear-gradient(to bottom, $yellow 0%, lighten($yellow, 20%) 100%);
+	}
+
+	&-single-currency {
+		display: flex;
+		align-items: flex-end;
+		padding: 1.3em 1em 1.3em 0;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid rgba($white, .3);
+		}
+	}
+
+	&-currency-price {
+		display: block;
+		width: 141px;
+		margin-right: 1em;
+		font-size: 2.25rem;
+		text-align: right;
+		line-height: 1;
+	}
+
+	&-inline-list {
+		font-size: .75rem;
+	}
+}
