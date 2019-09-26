@@ -13,10 +13,38 @@
 	word-wrap: normal !important;
 }
 
-.text-center {
-	text-align: center !important;
-}
+.important {
+	$margin: $grid-gutter-width * .5;
 
-.text-right {
-	text-align: right !important;
+	position: relative;
+	margin: 2em 0;
+	padding: 1em 0;
+
+	&::before,
+	&::after {
+		$size: 34px;
+
+		position: absolute;
+		width: $size;
+		height: $size;
+		content: '';
+		background-size: contain;
+	}
+
+	&::before {
+		left: -$margin;
+		top: 0;
+		background-image: url('#{$img-dir}important-before.svg');
+	}
+
+	&::after {
+		right: -$margin;
+		bottom: 0;
+		background-image: url('#{$img-dir}important-after.svg');
+	}
+
+	&-inner {
+		position: relative;
+		z-index: 1;
+	}
 }

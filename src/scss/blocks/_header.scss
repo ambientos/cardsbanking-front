@@ -1,5 +1,8 @@
 .header {
+	position: relative;
 	padding: 1.5em 0 .7em;
+	background-color: $white;
+	z-index: 1;
 
 	&-search {
 		&-control {
@@ -16,6 +19,50 @@
 				image: url('#{$img-dir}search.svg');
 				size: $grid-gutter-width * .5 auto;
 			}
+		}
+	}
+
+	&-menu {
+		width: 100%;
+		border-top: 1px solid $gray-200;
+
+		&-container {
+			padding: 0;
+			box-shadow: 0 0 32px 0 rgba($black, .1);
+		}
+
+		> .nav-item {
+			position: relative;
+
+			> .nav-link {
+				padding: 1.5715em 0;
+				font-weight: $font-weight-bold;
+			}
+		}
+
+		.nav-item {
+			font-size: .875rem;
+			text-transform: uppercase;
+		}
+
+		> .nav-item > .header-menu-item-rate {
+			$padding-x: $grid-gutter-width * .5;
+			$bg-color: $yellow;
+
+			padding: {
+				left: $padding-x;
+				right: $padding-x;
+			}
+			color: $gray-700;
+			background-color: $bg-color;
+
+			&:hover {
+				background-color: lighten($bg-color, 10%);
+			}
+		}
+
+		.sub-menu {
+			display: none;
 		}
 	}
 }

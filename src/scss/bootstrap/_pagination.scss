@@ -3,9 +3,6 @@
   justify-content: center;
   background-color: $gray-100;
 
-  @include list-unstyled();
-  @include border-radius();
-
   .nav-links {
     $color: $gray-600;
 

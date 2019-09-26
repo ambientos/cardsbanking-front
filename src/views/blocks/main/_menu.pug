@@ -1,0 +1,26 @@
+nav.header-menu-container.navbar.navbar-expand-lg.navbar-light
+	.container
+		button.navbar-toggler(
+			type='button',
+			data-toggle='collapse',
+			data-target='#main-navbar',
+			aria-controls='main-navbar',
+			aria-expanded='false',
+			aria-label='Раскрыть меню'
+		)
+			span.navbar-toggler-icon
+
+		div.collapse.navbar-collapse#main-navbar
+			ul.header-menu.navbar-nav.justify-content-between
+				- var menuList = [{'item': 'Все карты', subItems: ['Visa', 'MasterCard', 'МИР']}, {'item': 'Дебетовые'}, {'item': 'Кредитные'}, {'item': 'Инструкции'}, {'item': 'Переводы и оплата'}, {'item': 'Вопросы и ответы'}];
+				each menuListItem in menuList
+					li.nav-item
+						a.nav-link(href='/')= menuListItem.item
+						if menuListItem.subItems
+							ul.sub-menu.list-unstyled
+								each subMenuListItem in menuListItem.subItems
+									li.nav-item
+										a.nav-link(href='/')= subMenuListItem
+
+				li.nav-item
+						a.header-menu-item-rate.nav-link(href='/') Рейтинги карт

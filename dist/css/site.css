@@ -11,11 +11,27 @@
   overflow: hidden;
   word-wrap: normal !important; }
 
-.text-center {
-  text-align: center !important; }
-
-.text-right {
-  text-align: right !important; }
+.important {
+  position: relative;
+  margin: 2em 0;
+  padding: 1em 0; }
+  .important::before, .important::after {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    content: '';
+    background-size: contain; }
+  .important::before {
+    left: -15px;
+    top: 0;
+    background-image: url("../i/important-before.svg"); }
+  .important::after {
+    right: -15px;
+    bottom: 0;
+    background-image: url("../i/important-after.svg"); }
+  .important-inner {
+    position: relative;
+    z-index: 1; }
 
 @font-face {
   font-family: "GothamPro";
@@ -53,7 +69,10 @@
   src: url("../fonts/GothamPro/bold.woff2?v=20190904") format("woff2"), url("../fonts/GothamPro/bold.woff?v=20190904") format("woff"); }
 
 .header {
-  padding: 1.5em 0 .7em; }
+  position: relative;
+  padding: 1.5em 0 .7em;
+  background-color: #fff;
+  z-index: 1; }
   .header-search-control {
     height: auto;
     padding-left: 1em;
@@ -64,6 +83,30 @@
     background-position: calc(100% - 15px) 50%;
     background-image: url("../i/search.svg");
     background-size: 15px auto; }
+  .header-menu {
+    width: 100%;
+    border-top: 1px solid #e8e8e8; }
+    .header-menu-container {
+      padding: 0;
+      -webkit-box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.1); }
+    .header-menu > .nav-item {
+      position: relative; }
+      .header-menu > .nav-item > .nav-link {
+        padding: 1.5715em 0;
+        font-weight: 700; }
+    .header-menu .nav-item {
+      font-size: .875rem;
+      text-transform: uppercase; }
+    .header-menu > .nav-item > .header-menu-item-rate {
+      padding-left: 15px;
+      padding-right: 15px;
+      color: #495057;
+      background-color: #fec803; }
+      .header-menu > .nav-item > .header-menu-item-rate:hover {
+        background-color: #fed336; }
+    .header-menu .sub-menu {
+      display: none; }
 
 .logo {
   display: inline-block; }
@@ -87,6 +130,8 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover; }
+  .widget._gray {
+    background-color: #f9f9f9; }
   .widget-title {
     margin-bottom: 1em;
     font-size: 1.625rem;
