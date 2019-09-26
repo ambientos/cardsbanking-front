@@ -42,7 +42,7 @@
 			li {
 				&:not(:first-child) {
 					&::before {
-						margin-right: .7em;
+						margin: 0 .5em;
 						content: '|';
 					}
 				}

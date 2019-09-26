@@ -27,8 +27,8 @@ footer.footer
 				.col-md-3
 					.footer-copy © 2019 | CardsBanking.ru
 				.col-md
-					ul.footer-menu-sub.list-inline
+					ul.footer-menu-sub.list-unstyled.d-flex.justify-content-end
 						- var footerMenuSubList = ['О сайте', 'Карта сайта', 'Политика конфиденциальности', 'Пользовательское соглашение'];
 						each footerMenuSubItem in footerMenuSubList
-							li.list-inline-item
+							li
 								a(href='/')= footerMenuSubItem
