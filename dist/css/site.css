@@ -290,13 +290,12 @@ ul.toc_list {
   margin-bottom: -1px;
   border: 1px solid #e8e8e8;
   background: #fff; }
+  .category-menu-item-link, .category-menu-item-title, .category-menu-item-i {
+    display: block; }
   .category-menu-item-link {
-    display: block;
-    position: relative;
     width: 100%;
     min-height: 150px;
     padding: 30px;
-    line-height: 1.2;
     -webkit-transform: scale(1.02);
             transform: scale(1.02); }
     .category-menu-item-link:hover {
@@ -304,21 +303,26 @@ ul.toc_list {
       background-color: #fec803;
       -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.15);
               box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.15); }
-      .category-menu-item-link:hover::before {
-        border-color: inherit; }
-    .category-menu-item-link::before, .category-menu-item-link::after {
-      content: ''; }
-    .category-menu-item-link::before {
+  .category-menu-item-i {
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: auto 100%; }
+  .category-menu-item-title {
+    line-height: 1.2; }
+    .category-menu-item-title::before {
       display: block;
       width: 30px;
-      margin-bottom: .7em;
+      margin: .7em 0;
+      content: '';
       border-top: 1px solid #fec803;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
       @media (prefers-reduced-motion: reduce) {
-        .category-menu-item-link::before {
+        .category-menu-item-title::before {
           -webkit-transition: none;
           transition: none; } }
+    :hover > .category-menu-item-title::before {
+      border-color: inherit; }
 
 .breadcrumbs {
   margin: 2.2em 0 0;
@@ -382,20 +386,29 @@ ul.toc_list {
   .info-item::after {
     opacity: 0;
     background-image: url("../i/arrow-rt-hover.svg"); }
+  .info-item-i {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 1.5em;
+    border-radius: 50%;
+    background-color: #fec803; }
+    .info-item-i::before {
+      position: absolute;
+      left: 0.8em;
+      top: 0.8em;
+      width: 36px;
+      height: 36px;
+      content: '';
+      background-repeat: no-repeat;
+      background-image: var(--icon);
+      background-size: contain; }
   .info-item-title {
     display: block;
     position: relative;
     font-size: 1.125rem;
     font-weight: 500; }
-    .info-item-title::before, .info-item-title::after {
-      content: ''; }
-    .info-item-title::before {
-      display: block;
-      width: 36px;
-      height: 36px;
-      margin-bottom: 1.5em;
-      border-radius: 50%;
-      background-color: #fec803; }
 
 .posts-item {
   margin-bottom: 30px;

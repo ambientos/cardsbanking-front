@@ -18,10 +18,11 @@ block content
 			h2.widget-title Информационнные разделы
 			.info-list
 				.row
-					- var infoList = [{'type': 'all', 'title': 'Обзоры карт всех банков'}, {'type': 'debit', 'title': 'Дебетовые карты'}, {'type': 'credit', 'title': 'Кредитные карты'}, {'type': 'instruct', 'title': 'Инструкции'}, {'type': 'transfer', 'title': 'Переводы и оплата'}, {'type': 'qa', 'title': 'Вопросы и ответы'}];
+					- var infoList = [{'type': 'all', 'title': 'Обзоры карт всех банков'}, {'type': 'cdebit', 'title': 'Дебетовые карты'}, {'type': 'ccredit', 'title': 'Кредитные карты'}, {'type': 'instruct', 'title': 'Инструкции'}, {'type': 'transfer', 'title': 'Переводы и оплата'}, {'type': 'qa', 'title': 'Вопросы и ответы'}];
 					each infoListItem in infoList
 						.col-md-4
-							a(href='/', class='info-item box-item _'+ infoListItem.type)
+							a.info-item.box-item(href='/')
+								span.info-item-i(style='--icon: url(../t/icons/'+ infoListItem.type +'.svg)')
 								span.info-item-title= infoListItem.title
 
 	main.main

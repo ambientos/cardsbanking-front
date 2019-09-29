@@ -46,28 +46,41 @@
 			background-image: url('#{$img-dir}arrow-rt-hover.svg');
 		}
 
+		&-i {
+			$size: $grid-gutter-width * 1.2;
+
+			display: block;
+			position: relative;
+			width: $size;
+			height: $size;
+			margin-bottom: 1.5em;
+			border-radius: 50%;
+			background-color: $yellow;
+
+			&::before {
+				$size: $grid-gutter-width * 1.2;
+				$margin: .8em;
+
+				position: absolute;
+				left: $margin;
+				top: $margin;
+				width: $size;
+				height: $size;
+				content: '';
+				background: {
+					repeat: no-repeat;
+					image: var(--icon);
+					size: contain;
+				}
+			}
+		}
+
 		&-title {
 			display: block;
 			position: relative;
 			font: {
 				size: 1.125rem;
 				weight: $font-weight-medium;
-			}
-
-			&::before,
-			&::after {
-				content: '';
-			}
-
-			&::before {
-				$size: $grid-gutter-width * 1.2;
-
-				display: block;
-				width: $size;
-				height: $size;
-				margin-bottom: 1.5em;
-				border-radius: 50%;
-				background-color: $yellow;
 			}
 		}
 	}

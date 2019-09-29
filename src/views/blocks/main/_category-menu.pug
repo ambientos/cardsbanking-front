@@ -2,4 +2,6 @@ ul.category-menu.d-sm-flex.flex-sm-wrap.list-unstyled
 	- var categoryMenu = [{'type': 'credit', 'title': 'Кредитные карты'}, {'type': 'debit', 'title': 'Дебетовые карты'}, {'type': 'cashback', 'title': 'С кэшбэком'}, {'type': 'free', 'title': 'С бесплатным обслуживанием'}, {'type': 'grace', 'title': 'С льготным периодом'}, {'type': 'salary', 'title': 'Зарплатные'}, {'type': 'fund', 'title': 'Накопительные'}, {'type': 'virtual', 'title': 'Виртуальные'}, {'type': 'senior', 'title': 'Для пенсионеров'}, {'type': 'currency', 'title': 'Валютные'}, {'type': 'delivery', 'title': 'С доставкой на дом'}, {'type': 'post', 'title': 'С доставкой по почте'}];
 	each categoryMenuItem in categoryMenu
 		li.category-menu-item.d-flex
-			a(href='/', class='category-menu-item-link _'+ categoryMenuItem.type)= categoryMenuItem.title
+			a.category-menu-item-link(href='/')
+				span.category-menu-item-i(style='background-image:url(t/icons/'+ categoryMenuItem.type +'.svg)')
+				span.category-menu-item-title= categoryMenuItem.title
