@@ -1,8 +1,8 @@
 header.header
 	.container
-		.row.align-items-center
-			.col-md-4
-				a.logo.d-flex.align-items-center(href='/')
+		.row.align-items-center.justify-content-between
+			.col-9.col-md-5.col-lg-4
+				a.header-logo.logo.d-flex.align-items-center(href='/')
 					picture.logo-thumb._aside
 						img(
 							src='i/logo.png',
@@ -14,7 +14,7 @@ header.header
 						b CardsBanking.ru
 						span  Навигатор по банковским картам
 
-			.col-md
+			.d-none.d-md-block.col-md-5
 				.header-search
 					form(
 						action='/',
@@ -27,9 +27,19 @@ header.header
 							placeholder='Поиск по сайту',
 							value=''
 						)
+			.d-flex.d-lg-none.justify-content-end.col-3.col-md.navbar-light
+				button.navbar-toggler(
+					type='button',
+					data-toggle='collapse',
+					data-target='#main-navbar',
+					aria-controls='main-navbar',
+					aria-expanded='false',
+					aria-label='Раскрыть меню'
+				)
+					span.navbar-toggler-icon
 
-			.col-md-3
-				//- ul.header-links.list-inline
+			//- .col-md-3
+				- ul.header-links.list-inline
 					- var headerLinks = [{'title': 'Сравнение карт', 'type': 'compare'}, {'title': 'Избранное', 'type': 'favorites'}];
 					each headerLink in headerLinks
 						li.header-links-item.list-inline-item

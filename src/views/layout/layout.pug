@@ -1,3 +1,5 @@
+include ../blocks/main/_mixins.pug
+
 doctype html
 
 html(lang="ru" dir="ltr")
@@ -5,9 +7,9 @@ html(lang="ru" dir="ltr")
 		include _head.pug
 
 	body
-		include ../blocks/main/_mixins.pug
-
 		include ../blocks/header/header.pug
+
+		block header
 
 		block content
 

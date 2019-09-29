@@ -8,6 +8,10 @@
 		&-thumbnail {
 			position: relative;
 			margin-bottom: $padding;
+
+			a {
+				display: block;
+			}
 		}
 
 		&-category {

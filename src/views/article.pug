@@ -3,14 +3,15 @@ extends ./layout/layout.pug
 block meta
 	title Пластиковая карта МИР
 
-block content
-	include ./blocks/main/_menu.pug
+block header
+	include ./blocks/header/_menu.pug
 
+block content
 	+breadcrumbs(['Главная', 'Карты', 'МИР'])
 
 	.container
 		.row
-			main.main.col-md-8
+			main.main.col-lg-8
 				article.entry
 					header.entry-header
 						h1.entry-title(itemprop='headline') Пластиковая карта МИР от Сбербанка — всё о преимуществах и недостатках её использования
@@ -575,7 +576,7 @@ block content
 										value='Отправить комментарий'
 									)
 
-			aside.sidebar.col-md-4
+			aside.sidebar.col-lg-4
 				.promo-item
 					a.promo-item-text(href='/', style='background-image:url(t/17.jpg)')
 						b ТОП-10 

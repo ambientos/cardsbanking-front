@@ -285,8 +285,13 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 500;
   line-height: 1.2; }
 
-h1, .h1 {
-  font-size: 1.625rem; }
+@media (max-width: 991.98px) {
+  h1, .h1 {
+    font-size: 1.25rem; } }
+
+@media (min-width: 992px) {
+  h1, .h1 {
+    font-size: 1.625rem; } }
 
 h2, .h2 {
   font-size: 1.375rem;
@@ -353,6 +358,10 @@ mark,
   border-radius: 0;
   max-width: 100%;
   height: auto; }
+
+.img-block {
+  display: block;
+  width: 100%; }
 
 .figure {
   display: inline-block; }
@@ -2557,12 +2566,6 @@ input[type="button"].btn-block {
   background: no-repeat center center;
   background-size: 100% 100%; }
 
-@media (max-width: 575.98px) {
-  .navbar-expand-sm > .container,
-  .navbar-expand-sm > .container-fluid {
-    padding-right: 0;
-    padding-left: 0; } }
-
 @media (min-width: 576px) {
   .navbar-expand-sm {
     -webkit-box-orient: horizontal;
@@ -2594,12 +2597,6 @@ input[type="button"].btn-block {
           flex-basis: auto; }
     .navbar-expand-sm .navbar-toggler {
       display: none; } }
-
-@media (max-width: 767.98px) {
-  .navbar-expand-md > .container,
-  .navbar-expand-md > .container-fluid {
-    padding-right: 0;
-    padding-left: 0; } }
 
 @media (min-width: 768px) {
   .navbar-expand-md {
@@ -2633,12 +2630,6 @@ input[type="button"].btn-block {
     .navbar-expand-md .navbar-toggler {
       display: none; } }
 
-@media (max-width: 991.98px) {
-  .navbar-expand-lg > .container,
-  .navbar-expand-lg > .container-fluid {
-    padding-right: 0;
-    padding-left: 0; } }
-
 @media (min-width: 992px) {
   .navbar-expand-lg {
     -webkit-box-orient: horizontal;
@@ -2670,12 +2661,6 @@ input[type="button"].btn-block {
           flex-basis: auto; }
     .navbar-expand-lg .navbar-toggler {
       display: none; } }
-
-@media (max-width: 1199.98px) {
-  .navbar-expand-xl > .container,
-  .navbar-expand-xl > .container-fluid {
-    padding-right: 0;
-    padding-left: 0; } }
 
 @media (min-width: 1200px) {
   .navbar-expand-xl {
@@ -2717,10 +2702,6 @@ input[type="button"].btn-block {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
-  .navbar-expand > .container,
-  .navbar-expand > .container-fluid {
-    padding-right: 0;
-    padding-left: 0; }
   .navbar-expand .navbar-nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

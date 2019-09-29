@@ -4,42 +4,42 @@ block meta
 	title Банковские карты
 
 block content
-	section.widget(style='background-image:url(t/1.jpg)')
+	aside.widget(style='background-image:url(t/1.jpg)')
 		.container
-			h1.widget-title._main
+			.widget-title._main
 				b Путеводитель
 				|  в мире банковских карт
 
 			.category-menu-container
 				include ./blocks/main/_category-menu.pug
 
-	section.widget(style='background-image:url(t/9.jpg)')
+	aside.widget(style='background-image:url(t/9.jpg)')
 		.container
 			h2.widget-title Информационнные разделы
 			.info-list
 				.row
 					- var infoList = [{'type': 'all', 'title': 'Обзоры карт всех банков'}, {'type': 'cdebit', 'title': 'Дебетовые карты'}, {'type': 'ccredit', 'title': 'Кредитные карты'}, {'type': 'instruct', 'title': 'Инструкции'}, {'type': 'transfer', 'title': 'Переводы и оплата'}, {'type': 'qa', 'title': 'Вопросы и ответы'}];
 					each infoListItem in infoList
-						.col-md-4
+						.col-lg-4.col-md-6.d-flex
 							a.info-item.box-item(href='/')
 								span.info-item-i(style='--icon: url(../t/icons/'+ infoListItem.type +'.svg)')
 								span.info-item-title= infoListItem.title
 
-	main.main
-		.widget
-			.container
-				h2.widget-title Новые материалы
-				.widget-subtitle Актуальные обзоры банковских продуктов
-				include ./blocks/main/_posts.pug
-
-	section.widget
+	aside.widget
 		.container
-			h2.widget-title CardsBanking — эксперт по банковским продуктам
-			.widget-subtitle Всё про дебетовые и кредитные карты, кэшбэк и программы лояльности, пакеты услуг
-		.widget-custom._expert
+			h2.widget-title Новые материалы
+			.widget-subtitle Актуальные обзоры банковских продуктов
+			include ./blocks/main/_posts.pug
+
+	main.main
+		article.widget
+			header.container
+				h1.widget-title CardsBanking — эксперт по банковским продуктам
+				.widget-subtitle Всё про дебетовые и кредитные карты, кэшбэк и программы лояльности, пакеты услуг
+			.widget-custom._expert
+				.container
+					p Клиент подтверждает наличие кредитной задолженности в другом банке и  просит погасить ее средствами с карточного счета. Тинькофф переводит  деньги, предоставляет беспроцентную рассрочку.
+					p Если за 4 месяца долг не  выплачивается, система рассчитывает график погашения по ставке,  согласованной в договоре на обслуживание карты. Воспользоваться правом на рефинансирование можно раз в год. Держатель  пластика через чат или по телефону активирует функцию перевода баланса.
 			.container
 				p Клиент подтверждает наличие кредитной задолженности в другом банке и  просит погасить ее средствами с карточного счета. Тинькофф переводит  деньги, предоставляет беспроцентную рассрочку.
 				p Если за 4 месяца долг не  выплачивается, система рассчитывает график погашения по ставке,  согласованной в договоре на обслуживание карты. Воспользоваться правом на рефинансирование можно раз в год. Держатель  пластика через чат или по телефону активирует функцию перевода баланса.
-		.container
-			p Клиент подтверждает наличие кредитной задолженности в другом банке и  просит погасить ее средствами с карточного счета. Тинькофф переводит  деньги, предоставляет беспроцентную рассрочку.
-			p Если за 4 месяца долг не  выплачивается, система рассчитывает график погашения по ставке,  согласованной в договоре на обслуживание карты. Воспользоваться правом на рефинансирование можно раз в год. Держатель  пластика через чат или по телефону активирует функцию перевода баланса.

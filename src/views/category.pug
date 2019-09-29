@@ -3,9 +3,10 @@ extends ./layout/layout.pug
 block meta
 	title Карты Сбербанка
 
-block content
-	include ./blocks/main/_menu.pug
+block header
+	include ./blocks/header/_menu.pug
 
+block content
 	+breadcrumbs(['Главная', 'Карты', 'Карты Сбербанка'])
 
 	main.main
@@ -15,8 +16,8 @@ block content
 				p.important
 					span.important-inner Благодаря огромной сети отделений и банкоматов Сбербанк занимает первое место по выпуску дебетовых и кредитных карт. Каждый держатель пластикового носителя может легко найти устройство самообслуживания для снятияили внесния наличных. Также легко оформить и заказать карту обратившись в любое отделение, имея при себе паспорт.
 
-			section.widget
-				h2.widget-title Последние статьи о банке
+			.widget
+				.h2.widget-title Последние статьи о банке
 				include ./blocks/main/_posts.pug
 
 		.widget._gray

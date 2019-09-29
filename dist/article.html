@@ -19,24 +19,25 @@
 	<body>
 		<header class="header">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-4"><a class="logo d-flex align-items-center" href="/">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-9 col-md-5 col-lg-4"><a class="header-logo logo d-flex align-items-center" href="/">
 							<picture class="logo-thumb _aside"><img src="i/logo.png" srcset="i/logo.png, i/logo@2x.png 2x" width="56" alt=""></picture>
 							<div class="logo-title"><b>CardsBanking.ru</b><span> Навигатор по банковским картам</span></div></a></div>
-					<div class="col-md">
+					<div class="d-none d-md-block col-md-5">
 						<div class="header-search">
 							<form action="/" method="get" role="search">
 								<input class="header-search-control form-control" type="text" name="s" placeholder="Поиск по сайту" value="">
 							</form>
 						</div>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="d-flex d-lg-none justify-content-end col-3 col-md navbar-light">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Раскрыть меню"><span class="navbar-toggler-icon"></span></button>
+					</div>
 				</div>
 			</div>
 		</header>
 		<nav class="header-menu-container navbar navbar-expand-lg navbar-light">
 			<div class="container">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Раскрыть меню"><span class="navbar-toggler-icon"></span></button>
 				<div class="collapse navbar-collapse" id="main-navbar">
 					<ul class="header-menu navbar-nav justify-content-between">
 						<li class="nav-item"><a class="nav-link" href="/">Все карты</a>
@@ -61,15 +62,15 @@
 				</div>
 			</div>
 		</nav>
-				<div class="container">
-					<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="/"><span property="name">Главная</span>
-								<meta property="position" content="1"></a><span class="delimiter">|</span></span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="/"><span property="name">Карты</span>
-								<meta property="position" content="2"></a><span class="delimiter">|</span></span><span class="current-item">МИР</span>
-					</div>
-				</div>
+		<div class="container">
+			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="/"><span property="name">Главная</span>
+						<meta property="position" content="1"/></a><span class="delimiter">|</span></span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="/"><span property="name">Карты</span>
+						<meta property="position" content="2"/></a><span class="delimiter">|</span></span><span class="current-item">МИР</span>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row">
-				<main class="main col-md-8">
+				<main class="main col-lg-8">
 					<article class="entry">
 						<header class="entry-header">
 							<h1 class="entry-title" itemprop="headline">Пластиковая карта МИР от Сбербанка — всё о преимуществах и недостатках её использования</h1>
@@ -445,76 +446,76 @@
 						<div class="widget-title">Вам также может быть интересно</div>
 						<div class="row">
 							<div class="col-md-6 d-md-flex">
-										<article class="posts-item box-item post" itemscope itemtype="http://schema.org/BlogPosting">
-											<figure class="posts-item-thumbnail"><a href="/"><img class="img-fluid" src="t/10.jpg" itemprop="image" alt="">
-													<figcaption class="posts-item-category"><span itemprop="articleSection">Тинькофф</span></figcaption></a></figure>
-											<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Тонкости использования кредитной карты Тинькофф на 120 дней без процентов</span></a></header>
-											<div class="posts-item-excerpt" itemprop="articleBody">Если вам выдали кредит, значит, вы подтвердили свою платежеспособность. Финансовым организациям выгодно «уводить» друг</div>
-											<meta itemprop="author" content="Ivan Ivanov">
-											<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Тонкости использования кредитной карты Тинькофф на 120 дней без процентов">
-											<meta itemprop="dateModified" content="2019-08-08">
-											<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00">
-										</article>
+								<article class="posts-item box-item post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+									<figure class="posts-item-thumbnail"><a href="/"><img class="img-block img-fluid" src="t/10.jpg" itemprop="image" alt=""/>
+											<figcaption class="posts-item-category"><span itemprop="articleSection">Тинькофф</span></figcaption></a></figure>
+									<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Тонкости использования кредитной карты Тинькофф на 120 дней без процентов</span></a></header>
+									<div class="posts-item-excerpt" itemprop="articleBody">Если вам выдали кредит, значит, вы подтвердили свою платежеспособность. Финансовым организациям выгодно «уводить» друг</div>
+									<meta itemprop="author" content="Ivan Ivanov"/>
+									<meta itemscope="itemscope" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Тонкости использования кредитной карты Тинькофф на 120 дней без процентов"/>
+									<meta itemprop="dateModified" content="2019-08-08"/>
+									<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00"/>
+								</article>
 							</div>
 							<div class="col-md-6 d-md-flex">
-										<article class="posts-item box-item post" itemscope itemtype="http://schema.org/BlogPosting">
-											<figure class="posts-item-thumbnail"><a href="/"><img class="img-fluid" src="t/11.jpg" itemprop="image" alt="">
-													<figcaption class="posts-item-category"><span itemprop="articleSection">Карты</span></figcaption></a></figure>
-											<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Возможности премиальной дебетовой карты Тинькофф Black Edition</span></a></header>
-											<div class="posts-item-excerpt" itemprop="articleBody">Тинькофф начал развивать премиальный сегмент в апреле 2018, обслуживанию состоятельных клиентов уделяют повышенное внимание</div>
-											<meta itemprop="author" content="Ivan Ivanov">
-											<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Возможности премиальной дебетовой карты Тинькофф Black Edition">
-											<meta itemprop="dateModified" content="2019-08-08">
-											<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00">
-										</article>
+								<article class="posts-item box-item post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+									<figure class="posts-item-thumbnail"><a href="/"><img class="img-block img-fluid" src="t/11.jpg" itemprop="image" alt=""/>
+											<figcaption class="posts-item-category"><span itemprop="articleSection">Карты</span></figcaption></a></figure>
+									<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Возможности премиальной дебетовой карты Тинькофф Black Edition</span></a></header>
+									<div class="posts-item-excerpt" itemprop="articleBody">Тинькофф начал развивать премиальный сегмент в апреле 2018, обслуживанию состоятельных клиентов уделяют повышенное внимание</div>
+									<meta itemprop="author" content="Ivan Ivanov"/>
+									<meta itemscope="itemscope" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Возможности премиальной дебетовой карты Тинькофф Black Edition"/>
+									<meta itemprop="dateModified" content="2019-08-08"/>
+									<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00"/>
+								</article>
 							</div>
 							<div class="col-md-6 d-md-flex">
-										<article class="posts-item box-item post" itemscope itemtype="http://schema.org/BlogPosting">
-											<figure class="posts-item-thumbnail"><a href="/"><img class="img-fluid" src="t/12.jpg" itemprop="image" alt="">
-													<figcaption class="posts-item-category"><span itemprop="articleSection">Инструкции</span></figcaption></a></figure>
-											<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Особенности получения и использования кредитной карты Тинькофф Platinum</span></a></header>
-											<div class="posts-item-excerpt" itemprop="articleBody">Возможность не откладывать покупку, а оплатить кредиткой стала нормой. При выборе пластика мы оцениваем</div>
-											<meta itemprop="author" content="Ivan Ivanov">
-											<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Особенности получения и использования кредитной карты Тинькофф Platinum">
-											<meta itemprop="dateModified" content="2019-08-08">
-											<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00">
-										</article>
+								<article class="posts-item box-item post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+									<figure class="posts-item-thumbnail"><a href="/"><img class="img-block img-fluid" src="t/12.jpg" itemprop="image" alt=""/>
+											<figcaption class="posts-item-category"><span itemprop="articleSection">Инструкции</span></figcaption></a></figure>
+									<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Особенности получения и использования кредитной карты Тинькофф Platinum</span></a></header>
+									<div class="posts-item-excerpt" itemprop="articleBody">Возможность не откладывать покупку, а оплатить кредиткой стала нормой. При выборе пластика мы оцениваем</div>
+									<meta itemprop="author" content="Ivan Ivanov"/>
+									<meta itemscope="itemscope" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Особенности получения и использования кредитной карты Тинькофф Platinum"/>
+									<meta itemprop="dateModified" content="2019-08-08"/>
+									<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00"/>
+								</article>
 							</div>
 							<div class="col-md-6 d-md-flex">
-										<article class="posts-item box-item post" itemscope itemtype="http://schema.org/BlogPosting">
-											<figure class="posts-item-thumbnail"><a href="/"><img class="img-fluid" src="t/10.jpg" itemprop="image" alt="">
-													<figcaption class="posts-item-category"><span itemprop="articleSection">Тинькофф</span></figcaption></a></figure>
-											<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Тонкости использования кредитной карты Тинькофф на 120 дней без процентов</span></a></header>
-											<div class="posts-item-excerpt" itemprop="articleBody">Если вам выдали кредит, значит, вы подтвердили свою платежеспособность. Финансовым организациям выгодно «уводить» друг</div>
-											<meta itemprop="author" content="Ivan Ivanov">
-											<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Тонкости использования кредитной карты Тинькофф на 120 дней без процентов">
-											<meta itemprop="dateModified" content="2019-08-08">
-											<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00">
-										</article>
+								<article class="posts-item box-item post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+									<figure class="posts-item-thumbnail"><a href="/"><img class="img-block img-fluid" src="t/10.jpg" itemprop="image" alt=""/>
+											<figcaption class="posts-item-category"><span itemprop="articleSection">Тинькофф</span></figcaption></a></figure>
+									<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Тонкости использования кредитной карты Тинькофф на 120 дней без процентов</span></a></header>
+									<div class="posts-item-excerpt" itemprop="articleBody">Если вам выдали кредит, значит, вы подтвердили свою платежеспособность. Финансовым организациям выгодно «уводить» друг</div>
+									<meta itemprop="author" content="Ivan Ivanov"/>
+									<meta itemscope="itemscope" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Тонкости использования кредитной карты Тинькофф на 120 дней без процентов"/>
+									<meta itemprop="dateModified" content="2019-08-08"/>
+									<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00"/>
+								</article>
 							</div>
 							<div class="col-md-6 d-md-flex">
-										<article class="posts-item box-item post" itemscope itemtype="http://schema.org/BlogPosting">
-											<figure class="posts-item-thumbnail"><a href="/"><img class="img-fluid" src="t/11.jpg" itemprop="image" alt="">
-													<figcaption class="posts-item-category"><span itemprop="articleSection">Карты</span></figcaption></a></figure>
-											<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Возможности премиальной дебетовой карты Тинькофф Black Edition</span></a></header>
-											<div class="posts-item-excerpt" itemprop="articleBody">Тинькофф начал развивать премиальный сегмент в апреле 2018, обслуживанию состоятельных клиентов уделяют повышенное внимание</div>
-											<meta itemprop="author" content="Ivan Ivanov">
-											<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Возможности премиальной дебетовой карты Тинькофф Black Edition">
-											<meta itemprop="dateModified" content="2019-08-08">
-											<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00">
-										</article>
+								<article class="posts-item box-item post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+									<figure class="posts-item-thumbnail"><a href="/"><img class="img-block img-fluid" src="t/11.jpg" itemprop="image" alt=""/>
+											<figcaption class="posts-item-category"><span itemprop="articleSection">Карты</span></figcaption></a></figure>
+									<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Возможности премиальной дебетовой карты Тинькофф Black Edition</span></a></header>
+									<div class="posts-item-excerpt" itemprop="articleBody">Тинькофф начал развивать премиальный сегмент в апреле 2018, обслуживанию состоятельных клиентов уделяют повышенное внимание</div>
+									<meta itemprop="author" content="Ivan Ivanov"/>
+									<meta itemscope="itemscope" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Возможности премиальной дебетовой карты Тинькофф Black Edition"/>
+									<meta itemprop="dateModified" content="2019-08-08"/>
+									<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00"/>
+								</article>
 							</div>
 							<div class="col-md-6 d-md-flex">
-										<article class="posts-item box-item post" itemscope itemtype="http://schema.org/BlogPosting">
-											<figure class="posts-item-thumbnail"><a href="/"><img class="img-fluid" src="t/12.jpg" itemprop="image" alt="">
-													<figcaption class="posts-item-category"><span itemprop="articleSection">Инструкции</span></figcaption></a></figure>
-											<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Особенности получения и использования кредитной карты Тинькофф Platinum</span></a></header>
-											<div class="posts-item-excerpt" itemprop="articleBody">Возможность не откладывать покупку, а оплатить кредиткой стала нормой. При выборе пластика мы оцениваем</div>
-											<meta itemprop="author" content="Ivan Ivanov">
-											<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Особенности получения и использования кредитной карты Тинькофф Platinum">
-											<meta itemprop="dateModified" content="2019-08-08">
-											<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00">
-										</article>
+								<article class="posts-item box-item post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+									<figure class="posts-item-thumbnail"><a href="/"><img class="img-block img-fluid" src="t/12.jpg" itemprop="image" alt=""/>
+											<figcaption class="posts-item-category"><span itemprop="articleSection">Инструкции</span></figcaption></a></figure>
+									<header class="posts-item-title" itemprop="name"><a href="/" rel="bookmark" itemprop="url"><span itemprop="headline">Особенности получения и использования кредитной карты Тинькофф Platinum</span></a></header>
+									<div class="posts-item-excerpt" itemprop="articleBody">Возможность не откладывать покупку, а оплатить кредиткой стала нормой. При выборе пластика мы оцениваем</div>
+									<meta itemprop="author" content="Ivan Ivanov"/>
+									<meta itemscope="itemscope" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/" content="Особенности получения и использования кредитной карты Тинькофф Platinum"/>
+									<meta itemprop="dateModified" content="2019-08-08"/>
+									<meta itemprop="datePublished" content="2019-08-08T13:27:57+03:00"/>
+								</article>
 							</div>
 						</div>
 						<div class="comments-area" id="comments">
@@ -594,7 +595,7 @@
 						</div>
 					</div>
 				</main>
-				<aside class="sidebar col-md-4">
+				<aside class="sidebar col-lg-4">
 					<div class="promo-item"><a class="promo-item-text" href="/" style="background-image:url(t/17.jpg)"><b>ТОП-10 </b>кредитных карт с <b>Кэшбэком</b></a></div>
 					<div class="promo-item"><a class="promo-item-text" href="/" style="background-image:url(t/18.jpg)">Лучшие<br><b>Кредитные карты</b></a></div>
 					<div class="promo-item"><a class="promo-item-text" href="/" style="background-image:url(t/19.jpg)"><b>Рейтинг</b><br>дебетовых карт</a></div>
@@ -652,46 +653,46 @@
 			<div class="footer-main">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-5"><a class="logo" href="/">
+						<div class="footer-main-info col-lg-5 col-sm-12"><a class="logo" href="/">
 								<picture class="logo-thumb _top"><img src="i/logo-white.png" srcset="i/logo-white.png, i/logo-white@2x.png 2x" width="56" alt=""></picture>
 								<div class="logo-title"><b>CardsBanking.ru</b><span> Навигатор по банковским картам</span></div></a>
 							<div class="footer-info">Содержание сайта не является рекомендацией или офертой и носит информационно-справочный характер</div>
 						</div>
-						<div class="col-md">
-									<div class="footer-menu-container">
-										<div class="footer-menu-title">Дебетовые карты</div>
-										<ul class="footer-menu list-unstyled">
-											<li><a href="/">Кредитные карты</a></li>
-											<li><a href="/">Сравнение кредиток</a></li>
-											<li><a href="/">Ссылка 1</a></li>
-											<li><a href="/">Ссылка 2</a></li>
-											<li><a href="/">Ссылка 3</a></li>
-										</ul>
-									</div>
+						<div class="col-sm">
+							<div class="footer-menu-container">
+								<div class="footer-menu-title">Дебетовые карты</div>
+								<ul class="footer-menu list-unstyled">
+									<li><a href="/">Кредитные карты</a></li>
+									<li><a href="/">Сравнение кредиток</a></li>
+									<li><a href="/">Ссылка 1</a></li>
+									<li><a href="/">Ссылка 2</a></li>
+									<li><a href="/">Ссылка 3</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="col-md">
-									<div class="footer-menu-container">
-										<div class="footer-menu-title">Кредитные карты</div>
-										<ul class="footer-menu list-unstyled">
-											<li><a href="/">Кредитные карты</a></li>
-											<li><a href="/">Сравнение кредиток</a></li>
-											<li><a href="/">Ссылка 1</a></li>
-											<li><a href="/">Ссылка 2</a></li>
-											<li><a href="/">Ссылка 3</a></li>
-										</ul>
-									</div>
+						<div class="col-sm">
+							<div class="footer-menu-container">
+								<div class="footer-menu-title">Кредитные карты</div>
+								<ul class="footer-menu list-unstyled">
+									<li><a href="/">Кредитные карты</a></li>
+									<li><a href="/">Сравнение кредиток</a></li>
+									<li><a href="/">Ссылка 1</a></li>
+									<li><a href="/">Ссылка 2</a></li>
+									<li><a href="/">Ссылка 3</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="col-md">
-									<div class="footer-menu-container">
-										<div class="footer-menu-title">Кредитные карты</div>
-										<ul class="footer-menu list-unstyled">
-											<li><a href="/">Кредитные карты</a></li>
-											<li><a href="/">Сравнение кредиток</a></li>
-											<li><a href="/">Ссылка 1</a></li>
-											<li><a href="/">Ссылка 2</a></li>
-											<li><a href="/">Ссылка 3</a></li>
-										</ul>
-									</div>
+						<div class="col-sm">
+							<div class="footer-menu-container">
+								<div class="footer-menu-title">Кредитные карты</div>
+								<ul class="footer-menu list-unstyled">
+									<li><a href="/">Кредитные карты</a></li>
+									<li><a href="/">Сравнение кредиток</a></li>
+									<li><a href="/">Ссылка 1</a></li>
+									<li><a href="/">Ссылка 2</a></li>
+									<li><a href="/">Ссылка 3</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -699,11 +700,11 @@
 			<div class="footer-sub">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-lg-3">
 							<div class="footer-copy">© 2019 | CardsBanking.ru</div>
 						</div>
-						<div class="col-md">
-							<ul class="footer-menu-sub list-unstyled d-flex justify-content-end">
+						<div class="col-lg">
+							<ul class="footer-menu-sub list-unstyled d-flex flex-wrap justify-content-md-end justify-content-center">
 								<li><a href="/">О сайте</a></li>
 								<li><a href="/">Карта сайта</a></li>
 								<li><a href="/">Политика конфиденциальности</a></li>

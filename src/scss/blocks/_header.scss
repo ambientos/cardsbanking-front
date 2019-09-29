@@ -1,8 +1,14 @@
 .header {
 	position: relative;
-	padding: 1.5em 0 .7em;
+	padding: 1.5em 0 0;
 	background-color: $white;
 	z-index: 1;
+
+	&-logo,
+	&-search,
+	.navbar-toggler {
+		margin-bottom: $grid-gutter-width;
+	}
 
 	&-search {
 		&-control {
@@ -15,6 +21,15 @@
 				image: url('#{$img-dir}search.svg');
 				size: $grid-gutter-width * .5 auto;
 			}
+
+			@include media-breakpoint-down('md') {
+				$padding-y: .607em;
+
+				padding: {
+					top: $padding-y;
+					bottom: $padding-y;
+				}
+			}
 		}
 	}
 
@@ -23,16 +38,32 @@
 		border-top: 1px solid $gray-200;
 
 		&-container {
-			padding: 0;
+			padding: {
+				top: 1px;
+				bottom: 0;
+			}
 			box-shadow: 0 0 32px 0 rgba($black, .1);
+
+			@include media-breakpoint-down('md') {
+				.navbar-collapse {
+					padding-bottom: 1em;
+				}
+			}
 		}
 
 		> .nav-item {
 			position: relative;
 
 			> .nav-link {
-				padding: 1.5715em 0;
 				font-weight: $font-weight-bold;
+
+				@include media-breakpoint-down('md') {
+					padding: 1em 0;
+				}
+
+				@include media-breakpoint-up('lg') {
+					padding: 1.5715em 0;
+				}
 			}
 		}
 

@@ -2,7 +2,7 @@ footer.footer
 	.footer-main
 		.container
 			.row
-				.col-md-5
+				.footer-main-info.col-lg-5.col-sm-12
 					a.logo(href='/')
 						picture.logo-thumb._top
 							img(
@@ -18,16 +18,16 @@ footer.footer
 
 				- var footerMenuTitles = ['Дебетовые карты', 'Кредитные карты', 'Кредитные карты'], footerMenuList = ['Кредитные карты', 'Сравнение кредиток', 'Ссылка 1', 'Ссылка 2', 'Ссылка 3'];
 				each footerMenuTitle in footerMenuTitles
-					.col-md
+					.col-sm
 						+footerMenu({'title': footerMenuTitle, 'list': footerMenuList})
 
 	.footer-sub
 		.container
 			.row
-				.col-md-3
+				.col-lg-3
 					.footer-copy © 2019 | CardsBanking.ru
-				.col-md
-					ul.footer-menu-sub.list-unstyled.d-flex.justify-content-end
+				.col-lg
+					ul.footer-menu-sub.list-unstyled.d-flex.flex-wrap.justify-content-md-end.justify-content-center
 						- var footerMenuSubList = ['О сайте', 'Карта сайта', 'Политика конфиденциальности', 'Пользовательское соглашение'];
 						each footerMenuSubItem in footerMenuSubList
 							li
