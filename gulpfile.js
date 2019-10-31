@@ -5,6 +5,8 @@ const   gulp = require('gulp'),
         sass = require('gulp-sass'),
         plumber = require('gulp-plumber'),
 
+        eslint = require('gulp-eslint'),
+
         pug = require('gulp-pug'),
 
         path = {
@@ -70,9 +72,20 @@ function cssGenerate() {
 }
 
 
+// Check javascript eslint
+function eslintCheck() {
+    return gulp
+        .src(files.js)
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError())
+}
+
+
 // Watch files
 function watchFiles() {
     gulp.watch( files.scss, cssGenerate )
+    gulp.watch(files.js, eslintCheck)
     gulp.watch(files.pug, htmlGenerate)
     gulp.watch(
         [
@@ -87,4 +100,5 @@ const watch = gulp.parallel(watchFiles, browserSync)
 
 exports.html = htmlGenerate
 exports.css = cssGenerate
-exports.default = gulp.series(htmlGenerate, cssGenerate, watch)
+exports.eslint = eslintCheck
+exports.default = gulp.series(htmlGenerate, cssGenerate, eslintCheck, watch)
